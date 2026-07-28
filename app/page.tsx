@@ -1,24 +1,92 @@
-import { FaInstagram,FaGithub,FaLinkedin } from "react-icons/fa6";
-
+"use client"
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
+import SplitType from "split-type";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Introduction from "./introduction/page";
 export default function Home() {
+  
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    let rafId = 0;
+
+    const animate = (time: number) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(animate);
+    };
+
+    rafId = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, []);
+
+  useGSAP(() => {
+    const splitType = new SplitType("#modern", { types: "chars" });
+    const splitH1 = new SplitType("#main-text", { types: "words" });
+    
+
+    
+
+    gsap.from(splitType.chars, {
+      scrollTrigger: {
+        trigger: "#modern",
+        start: "top 70%",
+        end: "top 30%",
+        scrub: true,
+        markers: false,
+      },
+      opacity: 0,
+      x: 20,
+      y: 20,
+   
+    
+      
+      stagger: {
+        amount: 1,
+      },
+    });
+
+    
+
+    gsap.from(splitH1.words, {
+      opacity: 0,
+      x: 50,
+      delay: 1,
+      stagger: {
+        amount: 1,
+      },
+    });
+  }, []);
+
   return (
     <main>
-      <div className="container" >
-      <div className="content-box " id="home">
+      <div className="container">
+        <div className="content-box" id="home">
           <div className="lg-col">
             <div className="text-box">
-              <h1>Hello! <br/> we're (template.system) fifteen years deep into the desing journey full of deadlines, last-minute changes, and creative chaos.</h1>
+              <h1 id="main-text">
+                Hello! <br /> we're (template.system) fifteen years deep into the desing journey full of deadlines, last-minute changes, and creative chaos.
+              </h1>
             </div>
           </div>
         </div>
-        <section >
-          <div className="text-box" >
+        <section>
+          <div className="text-box">
             <h1 id="modern">Modern UI designbners will expand thier skillsets to inbclude frontend.</h1>
           </div>
         </section>
+        <Introduction/>
       </div>
       
-    </main>
     
+    </main>
   );
 }
