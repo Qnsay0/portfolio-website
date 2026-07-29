@@ -28,13 +28,11 @@ export default function Home() {
     };
   }, []);
 
+  const homeScreenText = 
+
   useGSAP(() => {
     const splitType = new SplitType("#modern", { types: "chars" });
     const splitH1 = new SplitType("#main-text", { types: "words" });
-    
-
-    
-
     gsap.from(splitType.chars, {
       scrollTrigger: {
         trigger: "#modern",
@@ -73,7 +71,8 @@ export default function Home() {
           <div className="lg-col">
             <div className="text-box">
               <h1 id="main-text">
-                Hello! <br /> we're (template.system) fifteen years deep into the desing journey full of deadlines, last-minute changes, and creative chaos.
+                HELLO. <br/> I'M BARTŁOMIEJ KLIMEK.<br/>
+                A FRONTEND WEB & MOBILE DEVELOPER FOCUSED ON CRAFTING RESPONSIVE, HIGH-PERFORMANCE USER INTERFACES. I SPECIALIZE IN BUILDING SEAMLESS DIGITAL EXPERIENCES.
               </h1>
             </div>
           </div>

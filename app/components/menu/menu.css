@@ -71,7 +71,7 @@
 .menu-cp .menu-links a{
     text-transform: uppercase;
     color: #000;
-    font-size: 80px;
+     font-size: clamp(2.5em,10vw,5em);
     line-height: 90%;
     letter-spacing: -0.02em;
 }

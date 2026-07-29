@@ -8,12 +8,9 @@ import { FaGithub,FaLinkedin } from "react-icons/fa6";
 
 export default function Introduction() {
 
-  const socials = [
-    {name:"github" , icon: "", link: ""},
-    {name:"LinkedIn" , icon: "",link: ""},
-    {name:"github" , icon: "",link: ""},
-    
-  ]
+
+  
+  
   useGSAP(() => {
     gsap.from("#lgCol", {
       opacity: 0,
@@ -22,11 +19,9 @@ export default function Introduction() {
         trigger: "#lgCol", 
         start: "top 70%",  
         toggleActions: "play none none none", 
-        markers: true   
-        
       },
       x: 200,
-      y: 50,
+      
     });
 
     gsap.from("#smCol", {
@@ -36,10 +31,9 @@ export default function Introduction() {
         trigger: "#smCol", 
         start: "top 70%",  
         toggleActions: "play none none none", 
-        markers: true   
       },
       x: -200,
-      y: 50,
+    
     })
     
   });
