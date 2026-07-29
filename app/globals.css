@@ -30,13 +30,13 @@ body{
 .content-box{
     display: flex;
     flex-direction: row;
-    
-   
+    height: calc(70vh);
+
 
 }
 
 .box-content .lg-col{
-    height: calc(100vh - 8em);
+    
     width: 100%;
     display: flex;
     
@@ -45,7 +45,7 @@ body{
 }
 .lg-col .text-box{
     height: 100%;
-    width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -53,12 +53,12 @@ body{
 }
 .lg-col .text-box h1{
     color: white;
-    font-size: clamp(3.5em, 7vw, 5em);
+    font-size: clamp(2.2em, 5vw, 5em);
     letter-spacing: -0.05em;
     
     text-transform: uppercase;
     line-height: 1;
-    font-weight: 300;
+    font-weight: 400;
     
 }
 
@@ -79,7 +79,7 @@ section .text-box{
     align-items: center;
 }
 section .text-box h1{
-    font-size: 3em;
+    font-size: clamp(1.8em, 5vw, 3em);
     max-width: 600px;
     text-align: center;
     color: #fff;

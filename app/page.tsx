@@ -10,7 +10,7 @@ export default function Home() {
   
 
   gsap.registerPlugin(ScrollTrigger);
-
+  ScrollTrigger.config({ ignoreMobileResize: true });
   useEffect(() => {
     const lenis = new Lenis();
     let rafId = 0;

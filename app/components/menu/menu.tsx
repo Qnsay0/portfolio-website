@@ -50,8 +50,10 @@ export default function Menu(){
         })
         .to(".menu-overlay", {
             duration: 1.25,
-           
+            
+            // include webkitClipPath for Safari compatibility
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            webkitClipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             ease: "power4.inOut",
             delay: -0.60,
             
