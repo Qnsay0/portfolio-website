@@ -1,102 +1,27 @@
-
 .IntroductionContainer{
-     min-height: 100vh;
-    color: #fff;
+    background-color: rgb(240, 234, 234);
+     
+    color: #000000;
     display: flex;
     gap: 3em;
+    padding: 2em;
     flex-wrap: wrap;
-
     align-content: flex-start;
-
-    
 }
 
 
-
-.lgCol{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-}
-
-.smCol p{
-    font-size: clamp(1.2em, 2vw, 2em);
+.titleBox h1{
+    color: black;
+    font-size: clamp(3em, 10vw,12em);
+    line-height: 1;
+    text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1;
+    letter-spacing: -0.05em;
 }
-
-.lgColThema{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-   
-    gap: 1em;
-}
-
-.lgColThema h1{
-    font-size: clamp(3em, 5vw, 8em);
-     line-height: 1;
-     font-weight: 500;
-     margin-top: -10px;
-     letter-spacing: -0.02em;
-}
-
-.lgColThema h2{
-    font-size: clamp(1.5em, 5vw, 2.2em);
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1;
-}
-
-.lgCol .textBox{
-    max-width: 800px; 
-}
-.textBox p{
-    font-size: clamp(0.9em, 3vw, 1.2em);
-    letter-spacing: -0.02em;
+.sectionTextBox p{
+    font-size: clamp(1.2em, 6vw, 3.5em);
     line-height: 125%;
-    
-}
-
-
-.portfolio-btn{
-    display: inline-block;
-    width: auto;
-    padding: 0.5em 1em;
-    box-sizing: border-box;
-    background-color: #9e2929;
-    text-align: center;
-    align-self: flex-start;
-    border-radius: 10px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-.portfolio-btn:hover{
-    background-color: #9e29298c;
-}
-
-.socials{ 
-    display: flex;
-    justify-content: space-between;
-    max-width: 800px;
-}
-
-.social-links-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em
-}
-.social-links-box .link{
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: all 0.5s;
-    opacity: 0.5;
-}
-.social-links-box .link:hover{
-    opacity: 1;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+    max-width: clamp(300px, 90%, 1200px);
 }

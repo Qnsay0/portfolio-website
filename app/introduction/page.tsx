@@ -40,35 +40,13 @@ export default function Introduction() {
 
   return (
     <div className="IntroductionContainer">
-        <div className="smCol" id="smCol">
-            <div className=""><p>Basic information <br/> about myself</p></div>
-            <div className="socials">
-                
-            </div>
+        <div className="titleBox">
+          <h1>Introduction</h1>
         </div>
-        <div className="lgCol" id="lgCol">
-          <div className="lgColThema">
-            <div className="title"><h1>[Introduction]</h1></div>
-            <div className="subtitle"><h2>"Is that boring Thing?</h2></div>
-          </div>
-          
-          <div className="textBox"><p>Lorem Ipsum is simply dummy text 
-            of the printing and typesetting industry. Lorem Ipsum has been 
-            the industry's standard dummy text ever since 1966, when designers 
-            at Letraset and James Mosley,standard dummy text ever since 1966, when designers 
-            at Letraset and James Mosley,<br/><br/> the librarian at St Bride Printing Library 
-            in London, took a 1914 Cicero translation and scrambled it to 
-            make dummy text for Letraset's Body Type sheets.</p>
-          </div>
-          <div className="socials">
-            <button className="portfolio-btn">Downloade CV</button>
-            <div className="social-links-box">
-              <div className="link" id="link"><a href="#"><FaGithub /></a></div>
-              <div className="link" id="link"><a href="#"><FaLinkedin /></a></div>
-              <div className="link" id="link"><a href="#"><FaLinkedin /></a></div>
-            </div>
-          </div>      
-        </div>     
+        <div className="sectionTextBox">
+          <p>[Welcome to the analysis of your competitors. This document will help you understand your industry better and see where you can fit and stand out in the market. Let’s do the research and overthrow your competition strategically. Refresh this document every year or so.]</p>
+        </div>
+        
     </div>
   );
 }
