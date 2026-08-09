@@ -30,6 +30,7 @@ export default function Projects() {
             <p>[Projekty w ktorych mialem przyjemnosc brac udzial i tworzyc nowe rzeczy!]</p>
           </div>
         </div>
+        
         {
           projectsCard.map((projectCard, index) => (
             <ProjectCard 

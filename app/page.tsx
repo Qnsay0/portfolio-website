@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
@@ -8,9 +8,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Introduction from "./introduction/page";
 import Projects from "./projects/page";
+import DesignPhilosophy from "./components/DesignPhilosophy/DesignPhilosophy";
 export default function Home() {
-  
-  
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.config({ ignoreMobileResize: true });
   useEffect(() => {
@@ -30,31 +29,8 @@ export default function Home() {
     };
   }, []);
 
-  
-
   useGSAP(() => {
-    const splitType = new SplitType("#modern", { types: "chars" });
     const splitH1 = new SplitType("#main-text", { types: "words" });
-    gsap.from(splitType.chars, {
-      scrollTrigger: {
-        trigger: "#modern",
-        start: "top 90%",
-        end: "top 30%",
-        scrub: true,
-        markers: false,
-      },
-      opacity: 0,
-      x: 20,
-      y: 20,
-   
-    
-      
-      stagger: {
-        amount: 1,
-      },
-    });
-
-    
 
     gsap.from(splitH1.words, {
       opacity: 0,
@@ -73,23 +49,20 @@ export default function Home() {
           <div className="lg-col">
             <div className="text-box">
               <h1 id="main-text">
-                HELLO. <br/> I'M BARTŁOMIEJ KLIMEK.<br/>
-                A FRONTEND WEB & MOBILE DEVELOPER FOCUSED ON CRAFTING RESPONSIVE, HIGH-PERFORMANCE USER INTERFACES. 
+                HELLO. <br /> I'M BARTŁOMIEJ KLIMEK.
+                <br />A FRONTEND WEB & MOBILE DEVELOPER FOCUSED ON CRAFTING
+                RESPONSIVE, HIGH-PERFORMANCE USER INTERFACES.
               </h1>
             </div>
           </div>
         </div>
-        
-        
       </div>
-      <section>
-          <div className="text-box">
-            <h1 id="modern">"Design is not just what it looks like and feels like. Design is how it works." <br/>~ Steve Jobs</h1>
-          </div>
-        </section>
-      <Introduction/>
-      <Projects/>
-    
+      <div className="relative">
+        <DesignPhilosophy />
+        <Introduction />
+      </div>
+
+      <Projects />
     </main>
   );
 }
