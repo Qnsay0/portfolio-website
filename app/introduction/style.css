@@ -1,27 +1,26 @@
-.IntroductionContainer{
-    background-color: rgb(240, 234, 234);
-     
-    color: #000000;
-    display: flex;
-    gap: 3em;
-    padding: 2em;
-    flex-wrap: wrap;
-    align-content: flex-start;
+.IntroductionContainer {
+  background-color: white;
+  height: 100dvh;
+  color: #000000;
+  display: flex;
+  gap: 3em;
+  padding: 2em clamp(2em, 10%, 8em);
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
-
-.titleBox h1{
-    color: black;
-    font-size: clamp(3em, 10vw,12em);
-    line-height: 1;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: -0.05em;
+.titleBox h1 {
+  color: black;
+  font-size: clamp(3em, 10vw, 12em);
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.05em;
 }
-.sectionTextBox p{
-    font-size: clamp(1.2em, 6vw, 3.5em);
-    line-height: 125%;
-    letter-spacing: -0.05em;
-    font-weight: 500;
-    max-width: clamp(300px, 90%, 1200px);
+.sectionTextBox p {
+  font-size: clamp(1.2em, 6vw, 3.5em);
+  line-height: 125%;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  max-width: clamp(300px, 90%, 1200px);
 }
