@@ -14,22 +14,7 @@ import Footer from "./components/footer/footer";
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.config({ ignoreMobileResize: true });
-  useEffect(() => {
-    const lenis = new Lenis();
-    let rafId = 0;
-
-    const animate = (time: number) => {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(animate);
-    };
-
-    rafId = requestAnimationFrame(animate);
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      lenis.destroy();
-    };
-  }, []);
+  useEffect(() => {}, []);
 
   useGSAP(() => {
     const splitH1 = new SplitType("#main-text", { types: "words" });
