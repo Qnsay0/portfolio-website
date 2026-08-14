@@ -1,10 +1,21 @@
+import { useGSAP } from "@gsap/react";
+
+import { homeTextAnimation } from "@/lib/animations";
+import { useRef } from "react";
+
 export default function Home() {
+  const textRef = useRef(null);
+
+  useGSAP(() => {
+    homeTextAnimation(textRef);
+  });
+
   return (
     <div className="container">
       <div className="content-box" id="home">
         <div className="lg-col">
           <div className="text-box">
-            <h1 id="main-text">
+            <h1 ref={textRef}>
               HELLO. <br /> I'M BARTŁOMIEJ KLIMEK.
               <br />A FRONTEND WEB & MOBILE DEVELOPER FOCUSED ON CRAFTING
               RESPONSIVE, HIGH-PERFORMANCE USER INTERFACES.

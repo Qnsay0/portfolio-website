@@ -1,15 +1,13 @@
 "use client";
 
 import { useGSAP } from "@gsap/react";
-import "@/app/introduction/style.css";
 import { useRef } from "react";
 import {
   introductionContainerAnimation,
   introductionTextAnimation,
   introductionTitleAnimation,
 } from "@/lib/animations";
-
-gsap.registerPlugin(ScrollTrigger);
+import { portfolioData } from "@/data/constans";
 
 export default function Introduction() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -23,14 +21,23 @@ export default function Introduction() {
   }, []);
 
   return (
-    <div className="IntroductionContainer" ref={containerRef}>
-      <div className="titleBox " ref={titleRef}>
-        <h1>{props.title}</h1>
-      </div>
+    <div
+      className="bg-white h-[100dvh] text-black flex flex-wrap content-start gap-[1em] py-[2em] px-[clamp(2em,10%,8em)]"
+      ref={containerRef}
+    >
+      <h1
+        ref={titleRef}
+        className="text-[clamp(3em,10vw,12em)] font-bold uppercase tracking-tighter leading-none"
+      >
+        {portfolioData.introduction.title}
+      </h1>
 
       <div className="sectionTextBox">
-        <p id="introductionTExt" ref={textRef}>
-          {props.subtitle}
+        <p
+          className="text-[clamp(1.2em,6vw,3.5em)] tracking-tighter leading-tight font-medium max-w-[800px"
+          ref={textRef}
+        >
+          {portfolioData.introduction.subtitle}
         </p>
       </div>
     </div>

@@ -80,7 +80,7 @@ export const introductionTextAnimation = (containerRef, textRef) => {
 
 export const introductionTitleAnimation = (containerRef, titleRef) => {
   if (!containerRef.current) return;
-  const splitTitle = new SplitType(".titleBox", { types: "chars" });
+  const splitTitle = new SplitType(titleRef.current, { types: "chars" });
 
   gsap.from(splitTitle.chars, {
     scrollTrigger: {
@@ -95,5 +95,18 @@ export const introductionTitleAnimation = (containerRef, titleRef) => {
     stagger: { amount: 1.5 },
     duration: 1,
     ease: "power2.out",
+  });
+};
+
+export const homeTextAnimation = (textRef) => {
+  const splitH1 = new SplitType(textRef.current, { types: "words" });
+
+  gsap.from(splitH1.words, {
+    opacity: 0,
+    x: 50,
+    delay: 1,
+    stagger: {
+      amount: 1,
+    },
   });
 };

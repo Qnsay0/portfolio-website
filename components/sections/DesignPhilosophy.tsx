@@ -3,12 +3,9 @@
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { philosophyTextAnimation } from "@/lib/animations";
+import { portfolioData } from "@/data/constans";
 
-interface DesignPhilosophyProps {
-  content: React.ReactNode;
-}
-
-export default function DesignPhilosophy(props: DesignPhilosophyProps) {
+export default function DesignPhilosophy() {
   const containerRef = useRef(null);
   const textRef = useRef(null);
 
@@ -19,7 +16,11 @@ export default function DesignPhilosophy(props: DesignPhilosophyProps) {
   return (
     <section ref={containerRef}>
       <div className="text-box">
-        <h1 ref={textRef}>{props.content}</h1>
+        <h1 ref={textRef}>
+          {portfolioData.designPhilosophy.quote}
+          <br />
+          {portfolioData.designPhilosophy.author}
+        </h1>
       </div>
     </section>
   );
