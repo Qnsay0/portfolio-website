@@ -1,92 +1,27 @@
-"use client"
-import { useEffect, useRef } from "react";
-import Lenis from "lenis";
-import SplitType from "split-type";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import Introduction from "./introduction/page";
-export default function Home() {
-  
+"use client";
 
-  gsap.registerPlugin(ScrollTrigger);
+import { useEffect } from "react";
+import Introduction from "@/components/sections/Introduction";
+import Projects from "@/components/sections/Projects";
+import DesignPhilosophy from "@/components/sections/DesignPhilosophy";
+import Footer from "@/components/layout/Footer";
+import { lenisSmoothScroll } from "@/lib/animations";
+import GridBackground from "@/components/ui/GridBackground";
+import Home from "@/components/sections/Home";
 
+export default function Main() {
   useEffect(() => {
-    const lenis = new Lenis();
-    let rafId = 0;
-
-    const animate = (time: number) => {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(animate);
-    };
-
-    rafId = requestAnimationFrame(animate);
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      lenis.destroy();
-    };
-  }, []);
-
-  useGSAP(() => {
-    const splitType = new SplitType("#modern", { types: "chars" });
-    const splitH1 = new SplitType("#main-text", { types: "words" });
-    
-
-    
-
-    gsap.from(splitType.chars, {
-      scrollTrigger: {
-        trigger: "#modern",
-        start: "top 70%",
-        end: "top 30%",
-        scrub: true,
-        markers: false,
-      },
-      opacity: 0,
-      x: 20,
-      y: 20,
-   
-    
-      
-      stagger: {
-        amount: 1,
-      },
-    });
-
-    
-
-    gsap.from(splitH1.words, {
-      opacity: 0,
-      x: 50,
-      delay: 1,
-      stagger: {
-        amount: 1,
-      },
-    });
+    lenisSmoothScroll();
   }, []);
 
   return (
     <main>
-      <div className="container">
-        <div className="content-box" id="home">
-          <div className="lg-col">
-            <div className="text-box">
-              <h1 id="main-text">
-                Hello! <br /> we're (template.system) fifteen years deep into the desing journey full of deadlines, last-minute changes, and creative chaos.
-              </h1>
-            </div>
-          </div>
-        </div>
-        <section>
-          <div className="text-box">
-            <h1 id="modern">Modern UI designbners will expand thier skillsets to inbclude frontend.</h1>
-          </div>
-        </section>
-        <Introduction/>
-      </div>
-      
-    
+      <GridBackground />
+      <Home />
+      <DesignPhilosophy />
+      <Introduction />
+      <Projects />
+      <Footer />
     </main>
   );
 }
