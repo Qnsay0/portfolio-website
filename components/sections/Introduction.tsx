@@ -22,7 +22,7 @@ export default function Introduction() {
 
   return (
     <div
-      className="bg-white h-[100dvh] text-black flex flex-wrap content-start gap-[1em] py-[2em] px-[clamp(2em,10%,8em)]"
+      className="bg-white min-h-dvh text-black flex flex-wrap content-start gap-[1em] py-[2em] px-[clamp(2em,10%,8em)]"
       ref={containerRef}
     >
       <h1

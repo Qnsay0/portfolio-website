@@ -6,6 +6,9 @@ import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({ ignoreMobileResize: true });
 
+export const Reference = {
+  const type 
+}
 export const lenisSmoothScroll = () => {
   const lenis = new Lenis();
 
@@ -17,7 +20,10 @@ export const lenisSmoothScroll = () => {
   requestAnimationFrame(raf);
 };
 
-export const philosophyTextAnimation = (splitItem, triggerItem) => {
+export const philosophyTextAnimation = (
+  splitItem: Reference,
+  triggerItem: Reference,
+) => {
   const splitType = new SplitType(splitItem.current, { types: "chars" });
 
   gsap.from(splitType.chars, {
@@ -64,7 +70,6 @@ export const introductionTextAnimation = (containerRef, textRef) => {
       scrub: 1,
       start: "top 10%",
       end: "+=1000",
-      markers: true,
     },
     opacity: 0,
     y: 30,
@@ -88,7 +93,6 @@ export const introductionTitleAnimation = (containerRef, titleRef) => {
       scrub: true,
       start: "top 10%",
       end: "+=1000",
-      markers: true,
     },
     opacity: 0,
     y: 30,
