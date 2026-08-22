@@ -1,9 +1,9 @@
 export default function Navbar() {
   return (
     <div className="flex px-[2em] py-[1.5em] w-full z-0 bg-black justify-between">
-      <div className="uppercase tracking-[-0.02em]">
+      <div className=" tracking-[-0.02em]">
         <a href="#" className="text-white cursor-pointer">
-          portfolio
+          Frontend Developer
         </a>
       </div>
       <div>

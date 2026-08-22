@@ -28,29 +28,7 @@ body {
   background-color: #000000;
 }
 
-.container {
-
-
-
-  padding: 6em 2em 0 3em;
-
-}
-
-.content-box {
-  display: flex;
-  flex-direction: row;
-  min-height: calc(70vh);
-}
-
-.box-content .lg-col {
-  width: 100%;
-  display: flex;
-
-  flex-direction: column;
-}
 .lg-col .text-box {
-  height: 100%;
-  max-width: 1400px;
   display: flex;
   justify-content: start;
   align-items: center;
