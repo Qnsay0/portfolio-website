@@ -6,13 +6,10 @@ import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({ ignoreMobileResize: true });
 
-export const Reference = {
-  const type 
-}
 export const lenisSmoothScroll = () => {
   const lenis = new Lenis();
 
-  function raf(time) {
+  function raf(time: number) {
     lenis.raf(time);
     requestAnimationFrame(raf);
   }
@@ -21,8 +18,8 @@ export const lenisSmoothScroll = () => {
 };
 
 export const philosophyTextAnimation = (
-  splitItem: Reference,
-  triggerItem: Reference,
+  splitItem: React.RefObject<HTMLElement>,
+  triggerItem: React.RefObject<HTMLElement>,
 ) => {
   const splitType = new SplitType(splitItem.current, { types: "chars" });
 
@@ -43,7 +40,9 @@ export const philosophyTextAnimation = (
   return splitType;
 };
 
-export const introductionContainerAnimation = (containerRef) => {
+export const introductionContainerAnimation = (
+  containerRef: React.RefObject<HTMLElement | null>,
+) => {
   if (!containerRef.current) return;
 
   gsap.from(containerRef.current, {
@@ -57,7 +56,10 @@ export const introductionContainerAnimation = (containerRef) => {
   });
 };
 
-export const introductionTextAnimation = (containerRef, textRef) => {
+export const introductionTextAnimation = (
+  containerRef: React.RefObject<HTMLElement | null>,
+  textRef: React.RefObject<HTMLParagraphElement | null>,
+) => {
   if (!textRef.current) return;
 
   const splitText = new SplitType(textRef.current, {
@@ -83,8 +85,11 @@ export const introductionTextAnimation = (containerRef, textRef) => {
   };
 };
 
-export const introductionTitleAnimation = (containerRef, titleRef) => {
-  if (!containerRef.current) return;
+export const introductionTitleAnimation = (
+  containerRef: React.RefObject<HTMLElement | null>,
+  titleRef: React.RefObject<HTMLParagraphElement | null>,
+) => {
+  if (!containerRef.current || !titleRef.current) return;
   const splitTitle = new SplitType(titleRef.current, { types: "chars" });
 
   gsap.from(splitTitle.chars, {
@@ -102,7 +107,7 @@ export const introductionTitleAnimation = (containerRef, titleRef) => {
   });
 };
 
-export const homeTextAnimation = (textRef) => {
+export const homeTextAnimation = (textRef: React.RefObject<HTMLElement>) => {
   const splitH1 = new SplitType(textRef.current, { types: "words" });
 
   gsap.from(splitH1.words, {
