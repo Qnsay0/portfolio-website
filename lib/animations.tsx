@@ -18,9 +18,10 @@ export const lenisSmoothScroll = () => {
 };
 
 export const philosophyTextAnimation = (
-  splitItem: React.RefObject<HTMLElement>,
-  triggerItem: React.RefObject<HTMLElement>,
+  splitItem: React.RefObject<HTMLElement | null>,
+  triggerItem: React.RefObject<HTMLElement | null>,
 ) => {
+  if (!splitItem.current || !triggerItem.current) return;
   const splitType = new SplitType(splitItem.current, { types: "chars" });
 
   gsap.from(splitType.chars, {
@@ -107,9 +108,12 @@ export const introductionTitleAnimation = (
   });
 };
 
-export const homeTextAnimation = (textRef: React.RefObject<HTMLElement>) => {
+export const homeTextAnimation = (
+  textRef: React.RefObject<HTMLParagraphElement | null>,
+) => {
+  if (!textRef.current) return;
   const splitH1 = new SplitType(textRef.current, { types: "words" });
-
+  if (!textRef.current) return;
   gsap.from(splitH1.words, {
     opacity: 0,
     x: 50,

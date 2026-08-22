@@ -6,8 +6,8 @@ import { philosophyTextAnimation } from "@/lib/animations";
 import { portfolioData } from "@/data/constans";
 
 export default function DesignPhilosophy() {
-  const containerRef = useRef(null);
-  const textRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
 
   useGSAP(() => {
     philosophyTextAnimation(textRef, containerRef);

@@ -4,7 +4,7 @@ import { homeTextAnimation } from "@/lib/animations";
 import { useRef } from "react";
 
 export default function Home() {
-  const textRef = useRef(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
 
   useGSAP(() => {
     homeTextAnimation(textRef);
