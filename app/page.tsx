@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import { lenisSmoothScroll } from "@/lib/animations";
 import GridBackground from "@/components/ui/GridBackground";
 import Home from "@/components/sections/Home";
+import Contact from "@/components/sections/Contact";
 
 export default function Main() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Main() {
       <DesignPhilosophy />
       <Introduction />
       <Projects />
+      <Contact />
       <Footer />
     </main>
   );

@@ -53,6 +53,7 @@ export const introductionContainerAnimation = (
       end: "+=1200",
       scrub: true,
       pin: true,
+      invalidateOnRefresh: true,
     },
   });
 };
@@ -96,14 +97,14 @@ export const introductionTitleAnimation = (
   gsap.from(splitTitle.chars, {
     scrollTrigger: {
       trigger: containerRef.current,
-      scrub: true,
+      scrub: 1,
       start: "top 10%",
       end: "+=1000",
     },
     opacity: 0,
     y: 30,
-    stagger: { amount: 1.5 },
-    duration: 1,
+    stagger: { amount: 1 },
+    duration: 2,
     ease: "power2.out",
   });
 };
