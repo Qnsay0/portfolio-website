@@ -101,7 +101,7 @@ export default function Contact() {
           type="submit"
           className="bg-white text-black px-7.5 py-2.5 uppercase tracking-wider font-bold rounded-4xl w-fit m-auto"
         >
-          Wyslij wiadomsoc
+          Wyslij wiadomosc
         </button>
       </div>
     </div>

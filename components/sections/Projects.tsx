@@ -1,5 +1,6 @@
 import { portfolioData } from "@/data/constans";
 import ProjectCard from "../ui/ProjectCard";
+
 export default function Projects() {
   return (
     <div className="min-h-dvh bg-white p-[2em] flex flex-col text-black rounded-b-4xl">

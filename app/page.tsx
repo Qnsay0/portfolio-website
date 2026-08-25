@@ -9,6 +9,7 @@ import { lenisSmoothScroll } from "@/lib/animations";
 import GridBackground from "@/components/ui/GridBackground";
 import Home from "@/components/sections/Home";
 import Contact from "@/components/sections/Contact";
+import Navbar from "@/components/layout/Navbar";
 
 export default function Main() {
   useEffect(() => {
@@ -16,14 +17,17 @@ export default function Main() {
   }, []);
 
   return (
-    <main className="select-none">
-      <GridBackground />
-      <Home />
-      <DesignPhilosophy />
-      <Introduction />
-      <Projects />
-      <Contact />
-      <Footer />
-    </main>
+    <html>
+      <Navbar />
+      <main className="select-none">
+        <GridBackground />
+        <Home />
+        <DesignPhilosophy />
+        <Introduction />
+        <Projects />
+        <Contact />
+        <Footer />
+      </main>
+    </html>
   );
 }
