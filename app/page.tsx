@@ -16,7 +16,7 @@ export default function Main() {
   }, []);
 
   return (
-    <main>
+    <main className="select-none">
       <GridBackground />
       <Home />
       <DesignPhilosophy />

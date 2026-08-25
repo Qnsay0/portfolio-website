@@ -34,7 +34,7 @@ export default function Introduction() {
 
       <div className="sectionTextBox">
         <p
-          className="text-[clamp(1.6rem,6vw,3.5rem)] tracking-tighter leading-tight font-medium text-zinc-800 max-w-7xl"
+          className="text-[clamp(1.6rem,6vw,3.5rem)] tracking-tighter leading-tight font-normal text-zinc-800 max-w-7xl"
           ref={textRef}
         >
           {portfolioData.introduction.subtitle}

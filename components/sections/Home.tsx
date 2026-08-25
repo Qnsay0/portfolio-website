@@ -23,7 +23,7 @@ export default function Home() {
                 {portfolioData.home.name}
               </span>
 
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-gray-600 dark:text-gray-300 mt-6 max-w-4xl">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-neutral-300 dark:text-gray-300 mt-6 max-w-4xl">
                 {portfolioData.home.paragraphe}
               </p>
             </div>

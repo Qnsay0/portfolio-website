@@ -1,8 +1,7 @@
 @import "tailwindcss";
 * {
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  user-select: none;
+
   webkit-scrollbar {
     display: none;
   }

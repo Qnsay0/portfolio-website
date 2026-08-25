@@ -6,7 +6,7 @@ export const portfolioData = {
   },
 
   home: {
-    name: "Bartlomiej Klimek",
+    name: "Bartłomiej Klimek",
     paragraphe: `Technical Computer Science student at PWr specializing in building high-performance web and mobile apps with React, Next.js, TypeScript, and Swift.`,
   },
   introduction: {

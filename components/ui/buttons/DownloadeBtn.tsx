@@ -1,7 +1,11 @@
 export default function DownloadeBtn() {
   return (
-    <button className="text-white py-[5px] px-[10px] text-[0.7em] rounded-full transition-all duration-200 ease-in outline-none font-medium border border-white no-underline">
-      Downloade CV
-    </button>
+    <a
+      href="/CV_BKlimek.pdf"
+      download="CV_BKlimek.pdf"
+      className="text-white py-[5px] px-[10px] text-[0.7em] tracking-wider rounded-full  font-medium border border-white no-underline cursor-pointer"
+    >
+      Download CV
+    </a>
   );
 }

@@ -21,13 +21,13 @@ export default function DesignPhilosophy() {
       <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
         <h1
           ref={textRef}
-          className="text-white uppercase font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tighter"
+          className="text-white uppercase   font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tighter"
         >
-          "{portfolioData.designPhilosophy.quote}"
+          {portfolioData.designPhilosophy.quote}
         </h1>
 
         <p className="mt-8 md:mt-12 text-zinc-500 uppercase font-medium text-xl sm:text-2xl md:text-4xl tracking-widest">
-          ~ {portfolioData.designPhilosophy.author}
+          {portfolioData.designPhilosophy.author}
         </p>
       </div>
     </section>
