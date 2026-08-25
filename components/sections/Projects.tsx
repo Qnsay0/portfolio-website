@@ -13,7 +13,19 @@ export default function Projects() {
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap  w-full justify-center gap-5 mt-20 "></div>
+      <div className="flex flex-wrap  w-full justify-center gap-5 mt-20 ">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
     </div>
   );
 }
