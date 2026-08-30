@@ -124,3 +124,5 @@ export const homeTextAnimation = (
     },
   });
 };
+
+export const projectsTitleAnimation = () => {};

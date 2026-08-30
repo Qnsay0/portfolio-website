@@ -6,10 +6,14 @@ import {
   introductionContainerAnimation,
   introductionTextAnimation,
   introductionTitleAnimation,
-} from "@/lib/animations";
-import { portfolioData } from "@/data/constans";
+} from "@/src/lib/animations";
 
-export default function Introduction() {
+interface ProjectProps {
+  title: string;
+  text: string;
+}
+
+export default function Introduction(props: ProjectProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -22,22 +26,22 @@ export default function Introduction() {
 
   return (
     <div
-      className="bg-white min-h-dvh text-black flex flex-wrap content-start gap-[1em] py-[2em] px-[clamp(2em,10%,8em)]"
+      className="bg-white min-h-dvh text-black flex flex-col  content-start gap-[1em] py-[2rem] px-[5vw]"
       ref={containerRef}
     >
       <h1
         ref={titleRef}
-        className="text-[clamp(4rem,10vw,12rem)] font-bold uppercase tracking-tighter leading-none"
+        className="text-[clamp(3.2rem,min(10vw,15vh),12rem)] font-bold uppercase tracking-tighter leading-none"
       >
-        {portfolioData.introduction.title}
+        {props.title}
       </h1>
 
       <div className="sectionTextBox">
         <p
-          className="text-[clamp(1.6rem,6vw,3.5rem)] tracking-tighter leading-tight font-normal text-zinc-800 max-w-7xl"
+          className="text-[clamp(1.4rem,min(6vw,7vh),3.5rem)] tracking-tighter leading-tight font-normal text-zinc-800 max-w-7xl"
           ref={textRef}
         >
-          {portfolioData.introduction.subtitle}
+          {props.text}
         </p>
       </div>
     </div>

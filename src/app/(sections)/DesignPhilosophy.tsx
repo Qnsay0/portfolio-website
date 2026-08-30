@@ -2,10 +2,15 @@
 
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { philosophyTextAnimation } from "@/lib/animations";
-import { portfolioData } from "@/data/constans";
+import { philosophyTextAnimation } from "@/src/lib/animations";
+import { portfolioData } from "@/src/data/constans";
 
-export default function DesignPhilosophy() {
+interface ProjectProps {
+  quote: string;
+  author: string;
+}
+
+export default function DesignPhilosophy(props: ProjectProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
 
@@ -23,11 +28,11 @@ export default function DesignPhilosophy() {
           ref={textRef}
           className="text-white uppercase   font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tighter"
         >
-          {portfolioData.designPhilosophy.quote}
+          "{props.quote}"
         </h1>
 
         <p className="mt-8 md:mt-12 text-zinc-500 uppercase font-medium text-xl sm:text-2xl md:text-4xl tracking-widest">
-          {portfolioData.designPhilosophy.author}
+          ~ {props.author}
         </p>
       </div>
     </section>
